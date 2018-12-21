@@ -3,8 +3,10 @@ package com.myexample.demo.controller;
 import com.myexample.demo.model.Girl;
 import com.myexample.demo.persistence.GirlRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -28,18 +30,37 @@ public class GirlController {
         return list;
     }
 
+//    /**
+//    * @Description add girl by age and cupSize
+//    * @Author  rcss_j
+//    * @Date   2018/12/14 11:56
+//    * @Param
+//    * @Return
+//    * @Exception
+//    *
+//    */
+//    @PostMapping(value ="/girl")
+//    public Girl addGirl(@RequestParam String cupSize,@RequestParam Integer age){
+//        return girlRepository.save(new Girl(cupSize,age));
+//    }
+
     /**
-    * @Description add girl
+    * @Description add girl by girl
     * @Author  rcss_j
-    * @Date   2018/12/14 11:56
+    * @Date   2018/12/14 20:00
     * @Param
     * @Return
     * @Exception
     *
     */
     @PostMapping(value ="/girl")
-    public Girl addGirl(@RequestParam String cupSize,@RequestParam Integer age){
-        return girlRepository.save(new Girl(cupSize,age));
+    public Object addGirlByGirl(@Valid Girl girl,BindingResult bindingResult){
+        if(bindingResult.hasErrors()){
+            return bindingResult.getFieldError().getDefaultMessage();
+        }
+        girl.setAge(girl.getAge());
+        girl.setCupSize(girl.getCupSize());
+        return girlRepository.save(girl);
     }
 
     /**

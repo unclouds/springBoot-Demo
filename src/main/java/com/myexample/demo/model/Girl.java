@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Min;
 import java.util.Objects;
 
 @Entity
@@ -13,6 +14,7 @@ public class Girl {
     @GeneratedValue
     private Integer id;
     private String cupSize;
+    @Min(value = 18,message = "未成年")
     private Integer age;
 
     public Girl() {
