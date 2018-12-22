@@ -1,0 +1,241 @@
+{
+	"info": {
+		"_postman_id": "b7d85432-eaed-4c3a-9fbf-9a424b4319c7",
+		"name": "girl",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:7077/girls",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:7077/girls",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"girls"
+					]
+				},
+				"description": "demo of girl\nget girls "
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7077/girl",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "cupSize",
+							"value": "BB",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "22",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:7077/girl",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"girl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7077/girl",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "24",
+							"type": "text"
+						},
+						{
+							"key": "cupSize",
+							"value": "D",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "7",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:7077/girl",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"girl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7077/girl/1?cupSize=a&age=9",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:7077/girl/5?cupSize=a&age=22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"girl",
+						"5"
+					],
+					"query": [
+						{
+							"key": "cupSize",
+							"value": "a"
+						},
+						{
+							"key": "age",
+							"value": "22"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7077/girl/age/22",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:7077/girl/age/22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"girl",
+						"age",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7077/girl/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:7077/girl/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"girl",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7077/girl/age/after/18",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:7077/girl/age/after/18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"girl",
+						"age",
+						"after",
+						"18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7077/girl/age/before/18",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:7077/girl/age/before/18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"girl",
+						"age",
+						"before",
+						"18"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
